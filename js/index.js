@@ -9,7 +9,7 @@ for (let counter =0; counter < dates.length; counter++){
 
         // empty box
         const div1 = document.createElement("div");
-        div1.className = "timeline__component";
+        div1.className = "timeline_item";
         container.appendChild(div1);
 
         // line in the middle
@@ -22,12 +22,12 @@ for (let counter =0; counter < dates.length; counter++){
         div3.className = "timeline__component--bg";
 
         const title = document.createElement("h2");
-        title.className = "timeline__title";
+        title.className = "timeline-item-title";
         title.innerHTML = dates[counter].title;
         div3.appendChild(title);
 
         const summaryText = document.createElement("p");
-        summaryText.className = "timeline__summary";
+        summaryText.className = "timeline-item-summary";
         summaryText.innerHTML = dates[counter].summary;
         div3.appendChild(summaryText);
 
