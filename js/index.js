@@ -7,13 +7,18 @@ for (let counter =0; counter < dates.length; counter++){
 
 
     if (counter % 2 == 0) {
+        const div3 = document.createElement("div");
+        div3.className = "timeline-item";
 
         // date box
+        const emptyBox =  document.createElement("span");
+        emptyBox.className= "empty-box-space";
+        container.appendChild(emptyBox);
+
         const span =  document.createElement("span");
         span.className= "timeline-item-date";
         span.innerHTML = dates[counter].date;
-        container.appendChild(span);
-
+        div3.appendChild(span);
 
         // line in the middle
         const div2 = document.createElement("div");
@@ -23,9 +28,6 @@ for (let counter =0; counter < dates.length; counter++){
 
         // box with content
         
-
-        const div3 = document.createElement("div");
-        div3.className = "timeline-item";
 
         const title = document.createElement("h2");
         title.className = "timeline-item-title";
@@ -53,6 +55,13 @@ for (let counter =0; counter < dates.length; counter++){
         const div3 = document.createElement("div");
         div3.className = "timeline-item";
 
+
+          const span =  document.createElement("span");
+        span.className= "timeline-item-date";
+        span.innerHTML = dates[counter].date;
+        div3.appendChild(span);
+
+
         const title = document.createElement("h2");
         title.className = "timeline-item-title";
         title.innerHTML = dates[counter].title;
@@ -76,11 +85,13 @@ for (let counter =0; counter < dates.length; counter++){
 
 
         // date box
-        const span =  document.createElement("span");
-        span.className= "timeline-item-date";
-        span.innerHTML = dates[counter].date;
-        container.appendChild(span);
+        const emptyBox =  document.createElement("span");
+        emptyBox.className= "empty-box-space";
+        container.appendChild(emptyBox);
+
       
-    }
+
 };
+
+}
   
