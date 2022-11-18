@@ -32,7 +32,7 @@ for (let counter = 0; counter < dates.length; counter++) {
   infoButton.className = "timeline-item-more-info";
   infoButton.innerHTML = "More info";
   document.body.appendChild(infoButton);
-  timeline.appendChild(div);
+  // timeline.appendChild(div);
 
   //MODAL
 
@@ -74,25 +74,23 @@ for (let counter = 0; counter < dates.length; counter++) {
   modalId.appendChild(close);
   timeline.appendChild(modalId)
 
-
 // for (let counter = 0; counter < dates.length; counter++) {
 
 // Get DOM Elements
-const modalBtn = document.querySelector("#modal-container");
-const openModalBtn = document.querySelector(".timeline-item-more-info");
-const closeModalBtn = document.querySelector(".close");
+// const modalBtn = document.querySelector("#modal-container");
+// const openModalBtn = document.querySelectorAll(".timeline-item-more-info");
+// const closeModalBtn = document.querySelector(".close");
 
 // openModalBtn.onclick = () => openModal(dates[counter]);
 
-openModalBtn.addEventListener("click", openModal);
-closeModalBtn.addEventListener("click", closeModal);
+infoButton.addEventListener("click", openModal);
+close.addEventListener("click", closeModal);
 
 function closeModal()
- {modalBtn.style.display = 'none';}
+ {modalId.style.display = 'none';}
 
 function openModal() 
-{ modalBtn.style.display = 'block';};
-
+{ modalId.style.display = 'block';}
 };
 
 
