@@ -94,7 +94,7 @@ for (let counter =0; counter < dates.length; counter++){
 
 };
 
-}
+};
 
 
 
