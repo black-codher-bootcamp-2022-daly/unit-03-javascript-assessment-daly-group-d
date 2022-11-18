@@ -96,49 +96,49 @@ for (let counter =0; counter < dates.length; counter++){
   
 };
 
-const modalDiv = document.createElement("div");
-modalDiv.className = "modal";
-modalDiv.id= "modal-container";
-container.appendChild(modalDiv);
+// const modalDiv = document.createElement("div");
+// modalDiv.className = "modal";
+// modalDiv.id= "modal-container";
+// container.appendChild(modalDiv);
 
 
-const modalSpan = document.createElement("span");
-modalSpan.className = "closeBtn";
-modalSpan.id="modal-close-button";
-modalDiv.appendChild(modalSpan);
+// const modalSpan = document.createElement("span");
+// modalSpan.className = "closeBtn";
+// modalSpan.id="modal-close-button";
+// modalDiv.appendChild(modalSpan);
 
 
-const modalDate = document.createElement("p");
-modalDate.id= "modal-date";
-modalDate.innerHTML = dates[counter].date;
-modalDiv.appendChild(modalDate);
+// const modalDate = document.createElement("p");
+// modalDate.id= "modal-date";
+// modalDate.innerHTML = dates[counter].date;
+// modalDiv.appendChild(modalDate);
 
-const modalTitle = document.createElement("h2");
-modalTitle.id= "modal-title";
-modalTitle.innerHTML = dates[counter].title;
-modalDiv.appendChild(modalTitle);
+// const modalTitle = document.createElement("h2");
+// modalTitle.id= "modal-title";
+// modalTitle.innerHTML = dates[counter].title;
+// modalDiv.appendChild(modalTitle);
 
-const modalImage = document.createElement("image");
-modalImage.id= "modal-image";
-modalImage.innerHTML = dates[counter].image;
-modalDiv.appendChild(modalImage);
-
-
-const modalMoreInfo = document.createElement("p");
-modalMoreInfo.id= "modal-full-description";
-modalMoreInfo.innerHTML = dates[counter].fullDescription;
-modalDiv.appendChild(modalMoreInfo);
+// const modalImage = document.createElement("image");
+// modalImage.id= "modal-image";
+// modalImage.innerHTML = dates[counter].image;
+// modalDiv.appendChild(modalImage);
 
 
-const openBtn = document.createElement("button");
-openBtn.className = "timeline-item-more-info";
-openBtn.id= "More-info";
+// const modalMoreInfo = document.createElement("p");
+// modalMoreInfo.id= "modal-full-description";
+// modalMoreInfo.innerHTML = dates[counter].fullDescription;
+// modalDiv.appendChild(modalMoreInfo);
 
-const close = document.createElement("span");
-  close.id= "modal-close-button";
-  close.className = "close";
-  close.innerHTML = "&times;"
-  modalId.appendChild(close);
+
+// const openBtn = document.createElement("button");
+// openBtn.className = "timeline-item-more-info";
+// openBtn.id= "More-info";
+
+// const close = document.createElement("span");
+//   close.id= "modal-close-button";
+//   close.className = "close";
+//   close.innerHTML = "&times;"
+//   modalId.appendChild(close);
 
 
 //   const modalBtn = document.querySelector("#modal-container");
