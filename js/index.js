@@ -1,38 +1,38 @@
 import { dates } from "./data.js";
 
+const timeline = document.querySelector(".timeline");
+
 const header = document.createElement("h1");
 header.innerHTML = "MAYME'S BAKERY TIMELINE";
-document.body.appendChild(header);
+timeline.appendChild(header);
 
-
-const timeline = document.querySelector(".timeline");
 
 for (let counter = 0; counter < dates.length; counter++) {
   
   const div = document.createElement("div");
   div.className = "timeline-item";
-  document.body.appendChild(div)
+  timeline.appendChild(div)
 
   const title = document.createElement("h2");
   title.className = "timeline-item-title";
   title.innerHTML = dates[counter].title;
-  document.body.appendChild(title);
+  timeline.appendChild(title);
 
   const date = document.createElement("span");
   date.className = "timeline-item-date";
   date.innerHTML = dates[counter].date;
-  document.body.appendChild(date);
+  timeline.appendChild(date);
 
   const summaryText = document.createElement("p");
   summaryText.className = "timeline-item-summary";
   summaryText.innerHTML = dates[counter].summary;
-  document.body.appendChild(summaryText);
+  timeline.appendChild(summaryText);
 
   const infoButton = document.createElement("button");
   infoButton.className = "timeline-item-more-info";
   infoButton.innerHTML = "More info";
-  document.body.appendChild(infoButton);
-  // timeline.appendChild(div);
+  timeline.appendChild(infoButton);
+  timeline.appendChild(div);
 
   //MODAL
 
@@ -44,7 +44,7 @@ for (let counter = 0; counter < dates.length; counter++) {
   const modalId = document.createElement("div");
   modalId.setAttribute('id','modal-container');
   modalId.style.display = 'none';
-  document.body.appendChild(modalId);
+  timeline.appendChild(modalId);
   
   const timeId = document.createElement("modal-date");
   timeId.setAttribute('id','modal-date');
