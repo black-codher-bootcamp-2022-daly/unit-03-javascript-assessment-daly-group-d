@@ -3,6 +3,7 @@ import { dates } from "./data.js";
 
 const container = document.querySelector(".timeline");
 
+
 for (let counter =0; counter < dates.length; counter++){
 
 
@@ -94,4 +95,80 @@ for (let counter =0; counter < dates.length; counter++){
 };
 
 }
-  
+
+
+
+const openBtn = document.createElement("button");
+openBtn.className = "timeline-item-more-info";
+openBtn.id= "More-info";
+
+const modalDiv = document.createElement("div");
+modalDiv.className = "modal";
+modalDiv.id= "modal-container";
+container.appendChild(modalDiv);
+
+
+const modalContent = document.createElement("div");
+modalContent.className = "modal-content";
+modalDiv.appendChild(modalContent);
+
+
+const modalSpan = document.createElement("span");
+modalSpan.className = "closeBtn";
+modalSpan.id="modal-close-button";
+modalDiv.appendChild(modalSpan);
+
+
+const modalDate = document.createElement("p");
+modalDate.id= "modal-date";
+// modalDate.innerHTML = dates[counter].date;
+modalDiv.appendChild(modalDate);
+
+const modalTitle = document.createElement("h2");
+modalTitle.id= "modal-title";
+// modalTitle.innerHTML = dates[counter].title;
+modalDiv.appendChild(modalTitle);
+
+const modalImage = document.createElement("image");
+modalImage.id= "modal-image";
+// modalImage.innerHTML = dates[counter].image;
+modalDiv.appendChild(modalImage);
+
+
+const modalMoreInfo = document.createElement("p");
+modalMoreInfo.id= "modal-full-description";
+// modalMoreInfo.innerHTML = dates[counter].fullDescription;
+modalDiv.appendChild(modalMoreInfo);
+
+
+
+
+
+
+
+// //Get modal element
+var modal =  document.getElementById ('modal-container');
+
+// Get open modal button
+var moreInfo = document.getElementById ('More-info');
+
+// //Get close btn
+var closeBtn = document.getElementById ('modal-close-button');
+
+//listen for open click
+moreInfo.addEventListener('click', openModal);
+
+// //Listen for close click
+closeBtn.addEventListener('click', closeModal);
+
+// // func to open modal
+function openModal(){
+ modal.style.display = 'block';
+};
+
+// //func to close modal
+function closeModal(){
+ modal.style.display = 'none';
+};
+
+
