@@ -145,30 +145,3 @@ modalDiv.appendChild(modalMoreInfo);
 
 
 
-
-// //Get modal element
-var modal =  document.getElementById ('modal-container');
-
-// Get open modal button
-var moreInfo = document.getElementById ('More-info');
-
-// //Get close btn
-var closeBtn = document.getElementById ('modal-close-button');
-
-//listen for open click
-moreInfo.addEventListener('click', openModal);
-
-// //Listen for close click
-closeBtn.addEventListener('click', closeModal);
-
-// // func to open modal
-function openModal(){
- modal.style.display = 'block';
-};
-
-// //func to close modal
-function closeModal(){
- modal.style.display = 'none';
-};
-
-
