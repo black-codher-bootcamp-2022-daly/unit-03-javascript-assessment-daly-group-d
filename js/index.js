@@ -93,14 +93,8 @@ for (let counter =0; counter < dates.length; counter++){
       
 
 };
-
+  
 };
-
-
-
-const openBtn = document.createElement("button");
-openBtn.className = "timeline-item-more-info";
-openBtn.id= "More-info";
 
 const modalDiv = document.createElement("div");
 modalDiv.className = "modal";
@@ -136,36 +130,32 @@ modalMoreInfo.innerHTML = dates[counter].fullDescription;
 modalDiv.appendChild(modalMoreInfo);
 
 
-const exBtn = document.createElement("button");
-exBtn.id= "modal-close-button";
+const openBtn = document.createElement("button");
+openBtn.className = "timeline-item-more-info";
+openBtn.id= "More-info";
+
+const close = document.createElement("span");
+  close.id= "modal-close-button";
+  close.className = "close";
+  close.innerHTML = "&times;"
+  modalId.appendChild(close);
 
 
-// //Get modal element
-var modal =  document.getElementById ('modal-container');
+//   const modalBtn = document.querySelector("#modal-container");
+//   const openModalBtn = document.querySelector(".timeline-item-more-info");
+//   const closeModalBtn = document.querySelector(".close");
   
-// Get open modal button
-var moreInfo = document.getElementById ('More-info');
+//   // openModalBtn.onclick = () => openModal(dates[counter]);
   
-// //Get close btn
-var closeBtn = document.getElementById ('modal-close-button');
+//   openModalBtn.addEventListener("click", openModal);
+//   closeModalBtn.addEventListener("click", closeModal);
+  
+//   function closeModal()
+//    {modalBtn.style.display = 'none';}
+  
+//   function openModal() 
+//   { modalBtn.style.display = 'block';};
+  
 
-//listen for open click
-moreInfo.addEventListener('click', openModal);
-
-// //Listen for close click
-closeBtn.addEventListener('click', closeModal);
-
-// // func to open modal
-function openModal(){
-    modal.style.display = 'block';
-};
-
-// //func to close modal
-function closeModal(){
-    modal.style.display = 'none';
-};
-
-
-
-
+  
 
