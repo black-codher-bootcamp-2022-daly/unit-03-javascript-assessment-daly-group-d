@@ -1,66 +1,119 @@
-export const dates = [
-  {
-    title: "Yeast",
-    date: "2600 BC",
-    fullDescription:
-      "The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.",
-    image:
-      "https://i1.wp.com/www.atthemummiesball.com/wp-content/uploads/2018/04/Relief-Depicting-the-Nurse-Tia.jpg?ssl=1",
-    summary: "The Egyptians are the first recorded civilization to use yeast",
-  },
-  {
-    title: "Sugar",
-    date: "1069 AD",
-    fullDescription:
-      "Sugar was a luxury in Europe until the early 19th century. The first sugar was recorded in England in 1069.",
-    image: "https://erajournal.co.uk/wp-content/uploads/2021/01/sugar-FI.png",
-    summary: "The first recorded use of sugar in England",
-  },
-  {
-    title: "Icing sugar",
-    date: "1494 AD",
-    fullDescription:
-      "Icing sugar was invented. It was originally used as a topping for marchpanes, an almond and sugar dessert.",
-    image:
-      "https://www.biggerbolderbaking.com/wp-content/uploads/2016/09/IMG_7428.jpg",
-    summary: "Icing sugar was invented",
-  },
-  {
-    title: "Soufflé",
-    date: "1700s AD",
-    fullDescription:
-      "Soufflé appears in France. Cakes and pastries also begin to appear, thanks to the increasing availability of sugar and the rising of the chef profession",
-    image:
-      "https://www.seasonsandsuppers.ca/wp-content/uploads/2013/02/souffle1200.jpg",
-    summary: "Soufflé appears in France",
-  },
-  {
-    title: "Milling",
-    date: "1779 AD",
-    fullDescription:
-      "Although the earliest archaeological evidence for wheat seeds crushed between simple millstones to make flour dates to 6000 BC. The Romans were the first to grind seeds on cone mills. In 1779, at the beginning of the Industrial Era, the first steam mill was erected in London.",
-    image:
-      "https://www.conserve-energy-future.com/wp-content/uploads/2021/07/wheat-and-flour.webp",
-    summary: "The first steam mill was erected in London",
-  },
-  {
-    title: "Baking powder",
-    date: "1843 AD",
-    fullDescription:
-      "The first modern version of baking powder was discovered and manufactured by Alfred Bird (1811-1878), British chemist and founder of Bird and Sons Ltd. His improved version of baking powder was created so he could make yeast-free bread for his wife, Elizabeth, who had allergies to eggs and yeast.",
-    image:
-      "https://homecookworld.com/wp-content/uploads/2021/05/Can-I-use-baking-powder-instead-of-baking-soda-780x520.jpg?ezimgfmt=ng%3Awebp%2Fngcb94%2Frs%3Adevice%2Frscb94-1",
-    summary:
-      "The first modern version of baking powder was discovered and manufactured by British chemist Alfred Bird",
-  },
-  {
-    title: "Synthetic organic dye",
-    date: "1856 AD",
-    fullDescription:
-      "William Henry Perkin discovered the first synthetic organic dye, called mauve, used to colour foods, drugs, and cosmetics.",
-    image:
-      "https://www.wilton.com/dw/image/v2/AAWA_PRD/on/demandware.static/-/Sites-wilton-project-master/default/dw13ab30a5/images/project/WLPROJ-9083/RoMaCa_43176%2001.jpg?sw=800&sh=800",
-    summary: "The first synthetic organic dye was discovered",
-  },
-];
+import { dates } from "./data.js";
+
+const timeline = document.querySelector(".timeline");
+
+const header = document.createElement("h1");
+header.innerHTML = "MAYME'S BAKERY TIMELINE";
+document.body.appendChild(header);
+
+for (let counter = 0; counter < dates.length; counter++) {
+  
+  const div = document.createElement("div");
+  div.className = "timeline-item";
+  timeline.appendChild(div)
+
+  const title = document.createElement("h2");
+  title.className = "timeline-item-title";
+  title.innerHTML = dates[counter].title;
+  document.body.appendChild(title);
+
+  const date = document.createElement("span");
+  date.className = "timeline-item-date";
+  date.innerHTML = dates[counter].date;
+  document.body.appendChild(date);
+
+  const summaryText = document.createElement("p");
+  summaryText.className = "timeline-item-summary";
+  summaryText.innerHTML = dates[counter].summary;
+  document.body.appendChild(summaryText);
+
+  const infoButton = document.createElement("button");
+  infoButton.className = "timeline-item-more-info";
+  infoButton.innerHTML = "More info";
+  document.body.appendChild(infoButton);
+  timeline.appendChild(div)
+  
+// };
+// for (let counter = 0; counter < dates.length; counter++) {
+
+  const modal = document.createElement("div");
+  modal.setAttribute('id','modal');
+  document.body.appendChild(modal)
+  // timeline.appendChild(modal)
+
+  const modalId = document.createElement("div");
+  // const modalId = document.querySelector("div");
+  modalId.setAttribute('id','modal-container');
+  document.body.appendChild(modalId)
+  // timeline.appendChild(modalId)
+
+  const timeId = document.createElement("modal-date");
+  // const timeId = document.querySelector("modal-date");
+  timeId.setAttribute('id','modal-date');
+  timeId.innerHTML = dates[counter].date
+  modalId.appendChild(timeId)
+  // modalId.appendChild(date)
+
+// }
+
+// for (let counter = 0; counter < dates.length; counter++) {
+
+  const titleId = document.createElement("modal-title");
+  // const titleId = document.querySelector("modal-title");
+  titleId.setAttribute('id','modal-title');
+  titleId.innerHTML = dates[counter].title
+  modalId.appendChild(titleId)
+  // modalId.appendChild(title)
+
+  const imageId = document.createElement("img");
+  imageId.setAttribute('id','modal-image');
+  imageId.src = dates[counter].image
+  modalId.appendChild(imageId)
+  
+  const description = document.createElement("p");
+  description.setAttribute('id','modal-full-description');
+  description.innerHTML = dates[counter].fullDescription
+  modalId.appendChild(description)
+
+  const close = document.createElement("span");
+  close.setAttribute('id', 'modal-close-button')
+  close.className = "close";
+  close.innerHTML = "&times;"
+  modalId.appendChild(close)
+  document.body.getElementsByClassName("timeline-item-more-info")[0].appendChild(timeline)
+
+};
+
+
+// Get DOM Elements
+const modal = document.getElementsByClassName("hidden");
+const modalBtn = document.querySelector(".timeline-item-more-info");
+const closeBtn = document.querySelector(".close");
+
+// Open
+modalBtn.addEventListener("click", openModal);
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+closeBtn.addEventListener("click", closeModal);
+function closeModal() {
+  modal.style.display = 'none';
+
+}
+
+// const moreInfo = document.getElementsByClassName("hidden");
+// const button = document.getElementsByClassName(".timeline-item-more-info");
+
+// function handleClick() {
+//   const showDescription = document.querySelector("#modalId")
+
+// }
+// timeline.onclick = handleClick
+
+
+
+
+
 
