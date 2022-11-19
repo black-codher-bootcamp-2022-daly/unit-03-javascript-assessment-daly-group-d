@@ -1,4 +1,5 @@
-[TODO: Replace with your Netflify status badge]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85667902-13b9-4c23-b991-8c77bd539fb1/deploy-status)](https://app.netlify.com/sites/groupd-timeline/deploys)
+
 
 # JavaScript Assessment
 
