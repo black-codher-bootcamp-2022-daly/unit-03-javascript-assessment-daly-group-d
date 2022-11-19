@@ -6,7 +6,8 @@ const container = document.querySelector(".timeline");
 
 const header = document.createElement("h1");
 header.innerHTML = "MAYME'S BAKERY TIMELINE";
-container.appendChild(header);
+// container.appendChild(header);
+document.body.appendChild(header);
 
 // const h1 = document.createElement("H1");
 // const textNode = document.createTextNode("Hello World");

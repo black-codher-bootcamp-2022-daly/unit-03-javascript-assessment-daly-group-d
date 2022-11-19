@@ -18,23 +18,19 @@ body {
 
 
 h1{
-  font-size: 26px;
+  font-size: 43px;
   font-style: italic;
-color: yellow; 
- text-align:left; 
-  margin-bottom: 8%;
+  color: yellow; 
+  text-align:center; 
+  margin-left: 10%;
+  margin-bottom: 80%;
   position: absolute;
-  grid-template-columns: 1fr 3px 1fr ;
   display: grid;
-
-
-
 }
 
 
 .empty-box-space{
   padding: 10px 30px;
-  /* background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%); */
   color: white;
   position: relative;
   border-radius: 6px;
@@ -52,6 +48,17 @@ color: yellow;
   font-family: 'fira sans', sans-serif;
   color: #ffff;
  }
+
+ button {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+  width: 100px;
+}
 
  .timeline__component--bg{
   margin: 0 20px 20px 20px;
@@ -89,13 +96,14 @@ color: yellow;
 
 #modal-container{
   margin: 10% auto;
-  position: absolute;
+  position:absolute;
   background-color: rgb(44, 136, 146);
   margin-top: 10%;
   padding: 20px;
   width: 50%;
   border-radius: 20px;
   text-align: center;
+  display: grid;
   
 }
 
