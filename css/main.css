@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
+
+body {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    font-family:"Urbanist", sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: "20px";
+    }
+    body {
+        font-size: "14px";
+        background-color: white;
+        color: #FFF 
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1025px) {
+    h1 {
+        font-size: "50px";
+    }
+    body {
+        font-size: "26px";
+        background-color: white;
+        color: #FFF
+    }
+}
+
+.timeline {
+  list-style: circle;
+
+}
+
+.timeline-item-more-info {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+  width: 100px;
+}
